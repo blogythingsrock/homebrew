@@ -3,9 +3,9 @@
 	<info>
 		<name>Weapons</name>
 		<description>The longsword Isolde inherited from her mother, once it held the soul of the mage adventurer Enserric who perished in Undermountain attempting to loot the weapon from an undead. Now the sword lies vacant-for now. Despite this the weapon still has potent life draining abilities, capable of healing its wielder with the injuried it inflicts.</description>
-		<author url="https://github.com/blogythingsrock/customweapons/raw/master/tombbladelongsword">custom</author>
+		<author url="https://github.com/blogythingsrock/homebrew/raw/master/CustomWeapons/tombbladelongsword">custom</author>
 		<update version="1.0.0">
-			<file name="tombbladelongsword.xml" url="https://github.com/blogythingsrock/customweapons/raw/master/tombbladelongsword" />
+			<file name="tombbladelongsword.xml" url="https://github.com/blogythingsrock/homebrew/raw/master/CustomWeapons/tombbladelongsword" />
 		</update>
 	</info>
 	<element name="Tomb Blade" type="Magic Item" source="Custom" id="ID_CUSTOM_DMG_MAGIC_ITEM_TOMB_BLADE">
