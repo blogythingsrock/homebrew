@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+	<name>Companions</name>
+		<description>Faerie dragon companion or familiar based on 3.5 edition video game mechanics with scaling health and saving throws</description>
+		<author url="https://github.com/blogythingsrock/customcompanion/raw/master/faeriedragon3.5">custom</author>
+		<update version="1.0.0">
+			<file name="faeriedragon3.5.xml" url="https://github.com/blogythingsrock/customcompanion/raw/master/faeriedragon3.5" />
+		</update>
+	</info>
+	<element name="Faerie Dragon" type="Companion" source="Custom" id="ID_CUSTOM_COMPANION_FAERIEDRAGON3.5">
+		<supports>Familiar, Variant Familiar</supports>
+		<description>
+ 			<p>A faerie dragon is a cat-sized dragon with butterfly wings, it wears a sharp-toothed grin and expresses its delight by the twitching of its tail. The only warning of a faerie dragon's presence is a stifled giggle. The dragon stays out of sight, watching invisibly as its victims contend with its pranks. When its fun is done, the dragon might reveal itself, depending on the disposition of its "prey". A faerie dragon has a sharp mind, fondness for treasure and good company, and a puckish sense of humor. Travelers can play to a faerie dragon's draconic nature of offering  it "treasure" in the form of sweets, baked goods, and baubles in exchange for information or safe passage through its territory. A faerie dragon's scales change hue as it ages, from red when it's 5 years or younger, orange when it's 6-10 years, yellow from 11-20, green 21-30, blue 31-40, indigo 41-50, and violet when they are 51 years or older. All faerie dragons have innate spellcasting abilities.</p>
+		</description>
+	<h7>HIT POINTS</h7>
+            <ul class="unstyled">
+                <li><strong>Hit Dice:</strong> 2d4 per companion level</li>
+		<li><strong>Hit Points at 1st Level:</strong> 6 + your Charisma modifier</li>
+	    </ul>
+	<setters>
+		<set name="strength">11</set>
+		<set name="dexterity">17</set>
+		<set name="constitution">13</set>
+		<set name="intelligence">14</set>
+		<set name="wisdom">12</set>
+		<set name="charisma">16</set>
+		<set name="ac">21</set>
+		<set name="hp">14 (2d4+2)</set>
+		<set name="speed">15 ft., fly 60 ft.</set>
+		<set name="languages">Understands Common, Sylvan and Draconic and can use telepathy if bonded companion/familiar</set>
+		<set name="skills">Arcana +4, Perception +3, Stealth +7</set>
+    <set name="senses">blindsight 10 ft., darkvision 60 ft., passive Perception 13</set>
+		<set name="immunities">Poison, Sleep</set>
+		<set name="conditionImmunities">Poisoned, Sleep</set>
+		<set name="type">Dragon</set>
+		<set name="size">Tiny</set>
+		<set name="alignment">Chaotic Good</set>
+		<set name="challenge">1</set>
+		<set name="traits">ID_CUSTOM_COMPANION_TRAIT_FAERIEDRAGON3.5_KEEN_SENSES,ID_CUSTOM_COMPANION_TRAIT_FAERIEDRAGON3.5_MAGIC_RESISTANCE,ID_CUSTOM_COMPANION_TRAIT_FAERIEDRAGON3.5_INNATE_SPELLCASTING,ID_CUSTOM_COMPANION_TRAIT_FAERIEDRAGON3.5_SUPERIOR_INVISIBILITY,ID_CUSTOM_COMPANION_TRAIT_FAERIEDRAGON3.5_SOUL_BOND</set>
+		<set name="actions">ID_CUSTOM_COMPANION_ACTION_FAERIEDRAGON3.5_BITE,ID_CUSTOM_COMPANION_ACTION_FAERIEDRAGON3.5_SUPERIOR_INVISIBILITY,ID_CUSTOM_COMPANION_ACTION_FAERIEDRAGON3.5_EUPHORIA_BREATH</set>
+	</setters>
+	<rules>
+		<stat name="companion:ac" value="21"/>
+		<stat name="companion:hp:max" value="1" bonus="base" />
+		<stat name="companion:speed" value="15"/>
+		<stat name="companion:speed:fly" value="60"/>
+		<stat name="companion:perception:proficiency" value="companion:proficiency" bonus="base"/>
+		<stat name="companion:stealth:proficiency" value="companion:proficiency" bonus="base"/>
+	<!-- pseudodragon’s Constitution modifier + your Charima modifier + five times your level in this class -->
+			<stat name="alternative:hp:max" value="companion:constitution:modifier" bonus="beast-CON Mod" />
+			<stat name="alternative:hp:max" value="charisma:modifier" bonus="CHA mod" />
+            <stat name="alternative:hp:max" value="level:warlock" />
+            <stat name="alternative:hp:max" value="level:warlock" />
+            <stat name="alternative:hp:max" value="level:warlock" />
+            <stat name="alternative:hp:max" value="level:warlock" />
+            <stat name="alternative:hp:max" value="level:warlock" />
+			<stat name="companion:hp:max" value="alternative:hp:max" bonus="base" />
+	</rules>
+	</element>
+	<element name="Soul Bond" type="Companion Trait" source="Unearthed Arcana: Cleric, Druid, and Wizard" id="ID_CUSTOM_COMPANION_TRAIT_FAERIEDRAGON3.5_SOUL_BOND">
+		<description>
+			<p>The following numbers increase by 1 when your proficiency bonus increases by 1: the faerie dragon’s skill and saving throw bonuses above, the bonuses to hit and damage of its Bite.</p>
+		</description>
+		<sheet>
+			<description>The following numbers increase by 1 when your proficiency bonus increases by 1: the faerie dragon’s skill and saving throw bonuses above, the bonuses to hit and damage of its Bite.</description>
+		</sheet>
+		<rules>
+			<stat name="soul bond:bonus" value="proficiency" bonus="base" />
+			<stat name="soul bond:bonus" value="-2" />			
+			<stat name="companion:ac" value="soul bond:bonus" />
+			<stat name="companion:nature:misc" value="soul bond:bonus" />
+			<stat name="companion:dexterity:save:misc" value="soul bond:bonus" />
+			<stat name="companion:constitution:save:misc" value="soul bond:bonus" />
+			<stat name="companion:wisdom:save:misc" value="soul bond:bonus" />
+		</rules>
+	</element>
+	<element name="Keen Senses" type="Companion Trait" source="Monster Manual" id="ID_CUSTOM_COMPANION_TRAIT_FAERIEDRAGON3.5_KEEN_SENSES">
+		<description>
+			<p>The faerie dragon has advantage on Wisdom (Perception) checks that rely on sight, hearing or smell.</p>
+		</description>
+		<sheet>
+			<description>The faerie dragon has advantage on Wisdom (Perception) checks that rely on sight, hearing or smell.</description>
+		</sheet>
+	</element>
+	<element name="Magic Resistance" type="Companion Trait" source="Monster Manual" id="ID_CUSTOM_COMPANION_TRAIT_FAERIEDRAGON3.5_MAGIC_RESISTANCE">
+		<description>
+			<p>The faerie dragon has advantage on saving throws against spells and other magical effects</p>
+		</description>
+		<sheet>
+			<description>The faerie dragon has advantage on saving throws against spells and other magical effects</description>
+		</sheet>
+  </element>
+  <element name="Innate Spellcasting" type="Companion Trait" source="Custom" id="ID_CUSTOM_COMPANION_TRAIT_FAERIEDRAGON3.5_INNATE_SPELLCASTING">
+    <description>
+      <p>The dragon's innate spellcasting ability is Charisma (spell save DC 13) based. It can innately cast a number of spells, as the dragon ages and changes color it gains additional spells. Red: One of each, once a day-dancing lights, mage hand and minor illusion. Orange: color spray 1x day. Yellow: mirror image 1x day. Green: suggestion 1x day. Blue: major image 1x day. Indigo: hallucinatory terrian 1x day. Violet: polymorph 1x day.</p>
+    </description>
+    <sheet>
+      <description>The dragon's innate spellcasting ability is Charisma (spell save DC 13) based. It can innately cast a number of spells, as the dragon ages and changes color it gains additional spells. Red: One of each, once a day-dancing lights, mage hand and minor illusion. Orange: color spray 1x day. Yellow: mirror image 1x day. Green: suggestion 1x day. Blue: major image 1x day. Indigo: hallucinatory terrian 1x day. Violet: polymorph 1x day.</description>
+    </sheet>
+	</element>
+	<element name="Superior Invisibility" type="Companion Trait" source="Custom" id="ID_CUSTOM_COMPANION_TRAIT_FAERIEDRAGON3.5_SUPERIOR_INVISIBILITY">
+		<description>
+			<p>As a bonus action, the dragon can turn magically invisible until its concentration ends (as if concentrating on a spell), any equipment the dragon wears or carries is invisible with it.</p>
+		</description>
+		<sheet>
+			<description>As a bonus action, the dragon can turn magically invisible until its concentration ends (as if concentrating on a spell), any equipment the dragon wears or carries is invisible with it.</description>
+		</sheet>
+	</element>
+	<element name="Bite" type="Companion Action" source="Monster Manual" id="ID_CUSTOM_COMPANION_ACTION_FAERIEDRAGON3.5_BITE">
+		<description>
+			<p>Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 4(1d4+2) piercing damage.</p>
+		</description>
+		<sheet>
+			<description>Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit:4(1d4+2) piercing damage.</description>
+		</sheet>
+	</element>
+  <element name="Superior Invisibility" type="Companion Action" source="Monster Manual" id="ID_CUSTOM_COMPANION_ACTION_FAERIEDRAGON3.5_SUPERIOR_INVISIBILITY">
+    <description>
+      <p>As a bonus action, the dragon can turn magically invisible until its concentration ends (as if concentrating on a spell), any equipment the dragon wears or carries is invisible with it.</p>
+    </description>
+    <sheet>
+      <description>As a bonus action, the dragon can turn magically invisible until its concentration ends (as if concentrating on a spell), any equipment the dragon wears or carries is invisible with it.</description>
+    </sheet>
+   </element>
+   <element name="Euphoria Breath" type="Companion Action" source="Custom" id="ID_CUSTOM_COMPANION_ACTION_FAERIEDRAGON3.5_EUPHORIA_BREATH">
+    <description>
+      <p>(Recharge 5-6) The dragon exhales a puff of euphoria gas at one creature within of 5 feet of it. The target mustt succeed on a DC Wisdom saving throw, or for 1 minute the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn: 1-4(The target takes no action or bonus action and uses all of its movement to move in a random direction), 5-6(The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success).</p>
+    </description>
+    <sheet>
+      <description>(Recharge 5-6) The dragon exhales a puff of euphoria gas at one creature within of 5 feet of it. The target mustt succeed on a DC Wisdom saving throw, or for 1 minute the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn: 1-4(The target takes no action or bonus action and uses all of its movement to move in a random direction), 5-6(The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success).</description>
+    </sheet>   
+</element>
+
+</elements>
