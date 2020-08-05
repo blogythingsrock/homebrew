@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+<info>
+	<name>Races</name>
+		<description>A tiefling with demonic or lower planes heritage.</description>
+		<author url="https://github.com/blogythingsrock/customraces/raw/master/abyssaltiefling">custom</author>
+		<update version="1.0.0">
+			<file name="abyssaltiefling.xml" url="https://github.com/blogythingsrock/customraces/raw/master/abyssaltiefling" />
+		</update>
+	</info>
+  <element name="Tiefling (Abyssal)" type="Sub Race" source="custom" id="ID_CUSTOM_SUBRACE_TIEFLING_ABYSSAL">
+		<supports>Tiefling</supports>
+		<description>
+			<p>Lineage from that of demons and the abyssal planes.</p>
+			<p class="indent"><b><i>Ability Score Increase. </i></b>Your Strength score increases by 2, and your Dexerity score by 1.</p>
+			<p class="indent"><b><i>Legacy of The Lower Planes. </i></b>You know the ray of frost cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the crown of madness spell once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Tiefling (Abyssal)" display="false">
+			<description>Descended of demons and the lower planes</description>
+		</sheet>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_TIEFLING_SUBRACE" />
+			<stat name="strength" value="2"/>
+			<stat name="dexterity" value="1"/>
+			<grant type="Racial Trait" id="ID_CUSTOM_RACIAL_TRAIT_LEGACY_OF_THE_LOWER_PLANES" />
+		</rules>
+	</element>
+   <element name="Legacy of The Lower Planes" type="Racial Trait" source="custom" id="ID_CUSTOM_RACIAL_TRAIT_LEGACY_OF_THE_LOWER_PLANES">
+		<description>
+			<p>You know the ray of frost cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the crown of madness spell once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet>
+			<description>You know the ray of frost cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the crown of madness spell once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_RAY_OF_FROST" />
+			<grant type="Spell" id="ID_PHB_SPELL_BURNING_HANDS" level="3"/>
+			<grant type="Spell" id="ID_PHB_SPELL_CROWN_OF_MADNESS" level="5"/>
+		</rules>
+	</element>
+</elements>
