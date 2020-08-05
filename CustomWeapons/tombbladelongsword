@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Weapons</name>
+		<description>The longsword Isolde inherited from her mother, once it held the soul of the mage adventurer Enserric who perished in Undermountain attempting to loot the weapon from an undead. Now the sword lies vacant-for now. Despite this the weapon still has potent life draining abilities, capable of healing its wielder with the injuried it inflicts.</description>
+		<author url="https://github.com/blogythingsrock/customweapons/raw/master/tombbladelongsword">custom</author>
+		<update version="1.0.0">
+			<file name="tombbladelongsword.xml" url="https://github.com/blogythingsrock/customweapons/raw/master/tombbladelongsword" />
+		</update>
+	</info>
+	<element name="Tomb Blade" type="Magic Item" source="Custom" id="ID_CUSTOM_DMG_MAGIC_ITEM_TOMB_BLADE">
+		<description>
+			<p>You have a +4 bonus to attack and damage rolls made with this weapon. When you attack a creature with this magic weapon and roll a 15 or higher on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain hit points equal to the extra damage dealt.</p>
+		</description>
+		<setters>
+			<set name="keywords">Tomb Blade</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="any sword">Weapon</set>
+			<set name="attunment">true</set>
+			<set name="rarity">Unique</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_GROUP_SWORDS</set>
+		</setters>
+	</element>
+</elements>
