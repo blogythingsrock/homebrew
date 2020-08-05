@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+<info>
+	<name>Companions</name>
+		<description>Pseudodragon companion or familiar based on 3.5 edition video game mechanics with scaling health and saving throws.</description>
+		<author url="https://github.com/blogythingsrock/customcompanion/raw/master/pseudodragon3.5">custom</author>
+		<update version="1.0.0">
+			<file name="pseudodragon3.5.xml" url="https://github.com/blogythingsrock/customcompanion/raw/master/pseudodragon3.5" />
+		</update>
+	</info>
+	<element name="Pseudodragon" type="Companion" source="Custom" id="ID_CUSTOM_COMPANION_PSEUDODRAGON3.5">
+		<supports>Familiar, Variant Familiar</supports>
+		<description>
+			<p>The elusive pseudodragon dwells in the quiet places of the world, making its home in the hollows of trees and small caves. With its red-brown scales, horns and a maw filled with sharp teeth, a pseudodragon resembles a tiny red dragon but its disposition is playful with a laconic wit. Pseudodragons have little interest in other creatures, and they avoid them whenever possible. If attacked a pseudodragon fights back using the poisonous stinger at the tip of its tail, one jab of which can put a creature into a catatonic state that can last for hours. Pseudodragons are selective when it comes to choosing companions and bond with a person only as long as it is treated fairly, putting up with no ill treatment. When bonded with an individual a pseudodragon can communicate telepathically even over long distances. They can also vocalize with animal noises, purring with pleasure, hissing for unpleasant surpirses. A chirp represents desire or greeting, and growls anger and discontent.</p>
+		</description> 
+	<h7>HIT POINTS</h7>
+            <ul class="unstyled">
+                <li><strong>Hit Dice:</strong> 2d4 per companion level</li>
+		<li><strong>Hit Points at 1st Level:</strong> 6 + your Charisma modifier</li>
+	    </ul>
+	<setters>
+		<set name="strength">11</set>
+		<set name="dexterity">17</set>
+		<set name="constitution">14</set>
+		<set name="intelligence">14</set>
+		<set name="wisdom">14</set>
+		<set name="charisma">10</set>
+		<set name="ac">21</set>
+		<set name="hp">14 (2d4+2)</set>
+		<set name="speed">15 ft., fly 60 ft.</set>
+		<set name="languages">Understands Common and Draconic but can't speak</set>
+		<set name="skills">Investigation +5, Perception +5, Stealth +4</set>
+    		<set name="senses">blindsight 10 ft., darkvision 60 ft., passive Perception 13</set>
+		<set name="immunities">Poison, Sleep</set>
+		<set name="conditionImmunities">Poisoned, Sleep</set>
+		<set name="type">Dragon</set>
+		<set name="size">Tiny</set>
+		<set name="alignment">Neutral Good</set>
+		<set name="challenge">1</set>
+		<set name="traits">ID_CUSTOM_COMPANION_TRAIT_PSEUDODRAGON3.5_KEEN_SENSES,ID_CUSTOM_COMPANION_TRAIT_PSEUDODRAGON3.5_MAGIC_RESISTANCE,ID_CUSTOM_COMPANION_TRAIT_PSEUDODRAGON3.5_FIERY_BREATH,IS_CUSTOM_COMPANION_TRAIT_PSEUDODRAGON3.5_SOUL_BOND</set>
+		<set name="actions">ID_CUSTOM_COMPANION_ACTION_PSEUDODRAGON3.5_BITE,ID_CUSTOM_COMPANION_ACTION_PSEUDODRAGON3.5_CONE_OF_FIRE,ID_CUSTOM_COMPANION_ACTION_PSEUDODRAGON3.5_STING</set>
+	</setters>
+	<rules>
+		<stat name="companion:ac" value="21"/>
+		<stat name="companion:hp:max" value="1" bonus="base" />
+		<stat name="companion:speed" value="15"/>
+		<stat name="companion:speed:fly" value="60"/>
+		<stat name="companion:perception:proficiency" value="companion:proficiency" bonus="base"/>
+		<stat name="companion:stealth:proficiency" value="companion:proficiency" bonus="base"/>
+	<!-- pseudodragon’s Constitution modifier + your Charima modifier + five times your level in this class -->
+			<stat name="alternative:hp:max" value="companion:constitution:modifier" bonus="beast-CON Mod" />
+			<stat name="alternative:hp:max" value="charisma:modifier" bonus="CHA mod" />
+            <stat name="alternative:hp:max" value="level:warlock" />
+            <stat name="alternative:hp:max" value="level:warlock" />
+            <stat name="alternative:hp:max" value="level:warlock" />
+            <stat name="alternative:hp:max" value="level:warlock" />
+            <stat name="alternative:hp:max" value="level:warlock" />
+			<stat name="companion:hp:max" value="alternative:hp:max" bonus="base" />
+	</rules>
+	</element>
+	<element name="Soul Bond" type="Companion Trait" source="Unearthed Arcana: Cleric, Druid, and Wizard" id="ID_CUSTOM_COMPANION_TRAIT_PSEUDODRAGON3.5_SOUL_BOND">
+		<description>
+			<p>The following numbers increase by 1 when your proficiency bonus increases by 1: the pseudodragon’s skill and saving throw bonuses above, the bonuses to hit and damage of its Bite and Sting.</p>
+		</description>
+		<sheet>
+			<description>The following numbers increase by 1 when your proficiency bonus increases by 1: the pseudodragon’s skill and saving throw bonuses above, the bonuses to hit and damage of its Bite and Sting.</description>
+		</sheet>
+		<rules>
+			<stat name="soul bond:bonus" value="proficiency" bonus="base" />
+			<stat name="soul bond:bonus" value="-2" />			
+			<stat name="companion:ac" value="soul bond:bonus" />
+			<stat name="companion:nature:misc" value="soul bond:bonus" />
+			<stat name="companion:dexterity:save:misc" value="soul bond:bonus" />
+			<stat name="companion:constitution:save:misc" value="soul bond:bonus" />
+			<stat name="companion:wisdom:save:misc" value="soul bond:bonus" />
+		</rules>
+	</element>
+	<element name="Keen Senses" type="Companion Trait" source="Monster Manual" id="ID_CUSTOM_COMPANION_TRAIT_PSEUDODRAGON3.5_KEEN_SENSES">
+		<description>
+			<p>The pseudodragon has advantage on Wisdom (Perception) checks that rely on sight, hearing or smell.</p>
+		</description>
+		<sheet>
+			<description>The pseudodragon has advantage on Wisdom (Perception) checks that rely on sight, hearing or smell.</description>
+		</sheet>
+	</element>
+	<element name="Magic Resistance" type="Companion Trait" source="Monster Manual" id="ID_CUSTOM_COMPANION_TRAIT_PSEUDODRAGON3.5_MAGIC_RESISTANCE">
+		<description>
+			<p>The pseudodragon has advantage on saving throws against spells and other magical effects</p>
+		</description>
+		<sheet>
+			<description>The pseudodragon has advantage on saving throws against spells and other magical effects</description>
+		</sheet>
+  </element>
+  <element name="Fiery Breath" type="Companion Trait" source="Custom" id="ID_CUSTOM_COMPANION_TRAIT_PSEUDODRAGON3.5_FIERY_BREATH">
+    <description>
+      <p>Beginning at level 5 the pseudodragon can cast the cone of fire spell once as a 1st level spell using its Constitution as the modifier. Every five levels the spell increases in level gaining an additional 1d6 fire damage. This ability is regained after a long rest. At level 7 the pseudodragon can use the ability twice, 3 times at level 10, and 5 times a day at level 15 and up.</p>
+    </description>
+    <sheet>
+      <description>Beginning at level 5 the pseudodragon can cast the cone of fire spell once as a 1st level spell using its Constitution as the modifier. Every five levels the spell increases in level gaining an additional 1d6 fire damage. This ability is regained after a long rest. At level 7 the pseudodragon can use the ability twice, 3 times at level 10, and 5 times a day at level 15 and up.</description>
+    </sheet>
+	</element>
+	<element name="Bite" type="Companion Action" source="Monster Manual" id="ID_CUSTOM_COMPANION_ACTION_PSEUDODRAGON3.5_BITE">
+		<description>
+			<p>Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4(1d4+2) piercing damage.</p>
+		</description>
+		<sheet>
+			<description>Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit:4(1d4+2) piercing damage.</description>
+		</sheet>
+	</element>
+  <element name="Sting" type="Companion Action" source="Monster Manual" id="ID_CUSTOM_COMPANION_ACTION_PSEUDODRAGON3.5_STING">
+    <description>
+      <p>Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4(1d4+2) piercing damage. The target must succeed on a DC 11 Constitution saving throw or become poisoned for 1 hour, if the saving throw fails by 5 or more the target falls unconscious for the same duration or until it takes damage, or another creature uses an action to shake it awake</p>
+    </description>
+    <sheet>
+      <description>Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4(1d4+2) piercing damage. The target must succeed on a DC 11 Constitution saving throw or become poisoned for 1 hour, if the saving throw fails by 5 or more the target falls unconscious for the same duration or until it takes damage, or another creature uses an action to shake it awake</description>
+    </sheet>
+   </element>
+   <element name="Cone of Fire" type="Companion Action" source="Custom" id="ID_CUSTOM_COMPANION_ACTION_PSEUDODRAGON3.5_CONE_OF_FIRE">
+    <description>
+      <p>Casting Time: 1 action., Range:Self (15 ft cone) Each creature in a 15ft cone must make a Dexterity saving throw, a creature takes 3d6 fire damage on a failed save or half as much on a successful one. The damage increases by 1d6 for every five levels. Fire ignites any flammable objects in the area that aren't being worn or carried</p>
+    </description>
+    <sheet>
+      <description>Casting Time: 1 action., Range:Self (15 ft cone) Each creature in a 15ft cone must make a Dexterity saving throw, a creature takes 3d6 fire damage on a failed save or half as much on a successful one. The damage increases by 1d6 for every five levels. Fire ignites any flammable objects in the area that aren't being worn or carried</description>
+    </sheet>   
+</element>
+
+</elements>
