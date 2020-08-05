@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<update version="0.0.7">
-			<file name="homebrew.index" url="https://raw.githubusercontent.com/community-elements/elements-reddit/master/reddit.index" />
+			<file name="homebrew.index" https://github.com/blogythingsrock/homebrew/raw/master/homebrew.index" />
 		</update>
 	</info>
 	<files>
