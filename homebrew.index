@@ -4,7 +4,7 @@
 		<name>homebrew</name>
 		<description>Homebrew content for the group</description>
 		<update version="0.0.1">
-			<file name="homebrew.index" url="homebrew.index" url="https://github.com/blogythingsrock/homebrew/raw/master/homebrew.index" />
+			<file name="homebrew.index" url="https://github.com/blogythingsrock/homebrew/raw/master/homebrew.index" />
 		</update>
 	</info>
 	<files>
