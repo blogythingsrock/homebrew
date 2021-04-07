@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 <info>
-	<name>Races</name>
+	<name>Dhampir</name>
 		<description>The cursed mortal progeny of vampires, sometimes terms half-vampires or half-dead. Most dhampirs are tall and slender, possessing physical grace and unearthly beauty. While eye colour, skin hue, and hair colour resembles that of the mother, they also possess a ghostly pallor which people find unnerving. They tend to move with unworldly fluidity, and have a piercing gaze. Finally, all dhampirs possess elongated incisors, a trait passed down from the vampiric progenitor. All dhampir exhibit extremely slowed aging..</description>
 		<author url="https://github.com/blogythingsrock/homebrew/raw/master/CustomRaces/dhampir">custom</author>
 		<update version="1.0.0">
 			<file name="dhampir.xml" url="https://github.com/blogythingsrock/homebrew/raw/master/CustomRaces/dhampir" />
 		</update>
 	</info>
-  <element name="Dhampir" type="Sub Race" source="custom" id="ID_CUSTOM_SUBRACE_DHAMPIR">
+  <element name="Dhampir" type="Race" source="custom" id="ID_RACE_DHAMPIR">
 		<supports>Dhampir</supports>
 		<description>
 			<p>The cursed mortal progeny of vampires, sometimes terms half-vampires or half-dead. Most dhampirs are tall and slender, possessing physical grace and unearthly beauty. While eye colour, skin hue, and hair colour resembles that of the mother, they also possess a ghostly pallor which people find unnerving. They tend to move with unworldly fluidity, and have a piercing gaze. Finally, all dhampirs possess elongated incisors, a trait passed down from the vampiric progenitor. All dhampir exhibit extremely slowed aging..</p>
