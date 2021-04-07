@@ -25,11 +25,13 @@
 			<stat name="intelligence" value="2"/>
       <stat name="innate speed" value="35" bonus="base"/>
       <grant type="Size" id="ID_SIZE_MEDIUM"/>
-      <grant type="Language" id="ID_LANGUAGE_COMMON"/>	
+      <grant type="Language" id="ID_LANGUAGE_COMMON"/>
+	<grant type="Racial Trait" id="ID_RACIAL_TRAIT_DHAMPIR_SPIDER_CLIMB" />
+	<grant type="Racial Trait" id="ID_RACIAL_TRAIT_DHAMPIR_VAMPIRIC_BITE" />
       <select type="Language" name="Language (Dhampir)" supports="Standard||Exotic" requirements="!ID_DHAMPIR"/>
 	  </rules>
 </element>
-	<element name="Spider Climb" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_SPIDER_CLIMB">
+	<element name="Spider Climb" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_DHAMPIR_SPIDER_CLIMB">
 		<description>
 			<p>You have a climbing speed equal to your walking speed. In addition, at 3rd level, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free..</p>
 		</description>
@@ -37,7 +39,7 @@
 			<description>You have a climbing speed equal to your walking speed. In addition, at 3rd level, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free..</description>
 		</sheet>
 	</element>
-  <element name="Vampiric Bite" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_VAMPIRIC_BITE">
+  <element name="Vampiric Bite" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_DHAMPIR_VAMPIRIC_BITE">
     <description>
       <p>Your fanged bite is a natural weapon, which counts as a simple melee weapon with which you are proficient. You add your Constitution modifier to the attack and damage rolls when you attack with your bite. Your bite deals 1d4 piercing damage on a hit. While you are missing half or more of your hit points, you have advantage on attack rolls you make with this bite. When you use your bite and hit a creature that isn’t a Construct or an Undead, you can empower yourself in one of the following ways of your choice: (1) regain hit points equal to the damage dealt by the bite (2)gain a bonus to the next ability check or attack roll you make; the bonus equals the damage dealt by the bite. You can empower yourself with your bite a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest..</p>
     </description>
