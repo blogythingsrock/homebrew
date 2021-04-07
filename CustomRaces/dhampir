@@ -1,1 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+<info>
+	<name>Races</name>
+		<description>The cursed mortal progeny of vampires, sometimes terms half-vampires or half-dead. Most dhampirs are tall and slender, possessing physical grace and unearthly beauty. While eye colour, skin hue, and hair colour resembles that of the mother, they also possess a ghostly pallor which people find unnerving. They tend to move with unworldly fluidity, and have a piercing gaze. Finally, all dhampirs possess elongated incisors, a trait passed down from the vampiric progenitor. All dhampir exhibit extremely slowed aging..</description>
+		<author url="https://github.com/blogythingsrock/homebrew/raw/master/CustomRaces/dhampir">custom</author>
+		<update version="1.0.0">
+			<file name="dhampir.xml" url="https://github.com/blogythingsrock/homebrew/raw/master/CustomRaces/dhampir" />
+		</update>
+	</info>
+  <element name="Dhampir" type="Sub Race" source="custom" id="ID_CUSTOM_SUBRACE_DHAMPIR">
+		<supports>Dhampir</supports>
+		<description>
+			<p>The cursed mortal progeny of vampires, sometimes terms half-vampires or half-dead. Most dhampirs are tall and slender, possessing physical grace and unearthly beauty. While eye colour, skin hue, and hair colour resembles that of the mother, they also possess a ghostly pallor which people find unnerving. They tend to move with unworldly fluidity, and have a piercing gaze. Finally, all dhampirs possess elongated incisors, a trait passed down from the vampiric progenitor. All dhampir exhibit extremely slowed aging..</p>
+			<p class="indent"><b><i>Ability Score Increase. </i></b>Your Dexerity score increases by 2, and your Intelligence score by 2.</p>
+			<p class="indent"><b><i>Legacy of The Lower Planes. </i></b>You know the ray of frost cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the crown of madness spell once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Dhampir)" display="false">
+			<description>The cursed mortal progeny of vampires, sometimes terms half-vampires or half-dead. Most dhampirs are tall and slender, possessing physical grace and unearthly beauty. While eye colour, skin hue, and hair colour resembles that of the mother, they also possess a ghostly pallor which people find unnerving. They tend to move with unworldly fluidity, and have a piercing gaze. Finally, all dhampirs possess elongated incisors, a trait passed down from the vampiric progenitor. All dhampir exhibit extremely slowed aging..</description>
+		</sheet>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_DHAMPIR" />
+      <grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="dexerity" value="2"/>
+			<stat name="intelligence" value="2"/>
+      <stat name="innate speed" value="35" bonus="base"/>
+      <grant type="Size" id="ID_SIZE_MEDIUM"/>
+      <grant type="Language" id="ID_LANGUAGE_COMMON"/>	
+      <select type="Language" name="Language (Dhampir)" supports="Standard||Exotic" requirements="!ID_DHAMPIR"/>
+</element>
+	<element name="Spider Climb" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_SPIDER_CLIMB">
+		<description>
+			<p>You have a climbing speed equal to your walking speed. In addition, at 3rd level, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free..</p>
+		</description>
+		<sheet display="true">
+			<description>You have a climbing speed equal to your walking speed. In addition, at 3rd level, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free..</description>
+		</sheet>
+	</element>
+  <element name="Vampiric Bite" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_VAMPIRIC_BITE">
+    <description>
+      <p>Your fanged bite is a natural weapon, which counts as a simple melee weapon with which you are proficient. You add your Constitution modifier to the attack and damage rolls when you attack with your bite. Your bite deals 1d4 piercing damage on a hit. While you are missing half or more of your hit points, you have advantage on attack rolls you make with this bite. When you use your bite and hit a creature that isn’t a Construct or an Undead, you can empower yourself in one of the following ways of your choice: (1) regain hit points equal to the damage dealt by the bite (2)gain a bonus to the next ability check or attack roll you make; the bonus equals the damage dealt by the bite. You can empower yourself with your bite a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest..</p>
+    </description>
+    <sheet display="true">
+      <description>Your fanged bite is a natural weapon, which counts as a simple melee weapon with which you are proficient. You add your Constitution modifier to the attack and damage rolls when you attack with your bite. Your bite deals 1d4 piercing damage on a hit. While you are missing half or more of your hit points, you have advantage on attack rolls you make with this bite. When you use your bite and hit a creature that isn’t a Construct or an Undead, you can empower yourself in one of the following ways of your choice: (1) regain hit points equal to the damage dealt by the bite (2)gain a bonus to the next ability check or attack roll you make; the bonus equals the damage dealt by the bite. You can empower yourself with your bite a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest..</description>
+    </sheet>
+</elements>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
 
