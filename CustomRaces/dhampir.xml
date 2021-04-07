@@ -27,6 +27,7 @@
       <grant type="Size" id="ID_SIZE_MEDIUM"/>
       <grant type="Language" id="ID_LANGUAGE_COMMON"/>	
       <select type="Language" name="Language (Dhampir)" supports="Standard||Exotic" requirements="!ID_DHAMPIR"/>
+	  </rules>
 </element>
 	<element name="Spider Climb" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_SPIDER_CLIMB">
 		<description>
