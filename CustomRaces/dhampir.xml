@@ -13,20 +13,19 @@
 		<description>
 			<p>The cursed mortal progeny of vampires, sometimes terms half-vampires or half-dead. Most dhampirs are tall and slender, possessing physical grace and unearthly beauty. While eye colour, skin hue, and hair colour resembles that of the mother, they also possess a ghostly pallor which people find unnerving. They tend to move with unworldly fluidity, and have a piercing gaze. Finally, all dhampirs possess elongated incisors, a trait passed down from the vampiric progenitor. All dhampir exhibit extremely slowed aging..</p>
 			<h4>DHAMPIR TRAITS</h4>
-			<p class="indent"><b><i>Ability Score Increase. </i></b>Your Dexerity score increases by 2, and your Intelligence score by 2.</p>
+			<p class="indent"><b><i>Ability Score Increase. </i></b>Your Dexterity score increases by 2, and your Intelligence score by 2.</p>
 			<p>
 			<span class="feature">Speed.</span>Your base walking speed is 35 feet.<br/>
 			<span class="feature">Spider Climb.</span>You can traverse vertical surfaces with a climbing speed equal to your walking speed.<br/>
 			<span class="feature">Vampiric Bite.</span>Bite enemies to regain health or gain a bonus to your next ability check.<br/>
 			</p>
 		</description>
-		<sheet alt="Dhampir)" display="false">
+		<sheet alt="(Dhampir)" display="false">
 			<description>The cursed mortal progeny of vampires, sometimes terms half-vampires or half-dead. Most dhampirs are tall and slender, possessing physical grace and unearthly beauty. While eye colour, skin hue, and hair colour resembles that of the mother, they also possess a ghostly pallor which people find unnerving. They tend to move with unworldly fluidity, and have a piercing gaze. Finally, all dhampirs possess elongated incisors, a trait passed down from the vampiric progenitor. All dhampir exhibit extremely slowed aging..</description>
 		</sheet>
 		<rules>
-			<grant type="Grants" id="ID_INTERNAL_GRANTS_DHAMPIR" />
       <grant type="Vision" id="ID_VISION_DARKVISION" />
-			<stat name="dexerity" value="2"/>
+			<stat name="dexterity" value="2"/>
 			<stat name="intelligence" value="2"/>
       <stat name="innate speed" value="35" bonus="base"/>
       <grant type="Size" id="ID_SIZE_MEDIUM"/>
